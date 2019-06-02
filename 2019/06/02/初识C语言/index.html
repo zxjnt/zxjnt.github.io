@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="JingJing的博客">
 <meta property="og:description" content="环境搭建编辑器SublimeText http://www.sublimetext.com 书写代码的工具软件，类比Word。 编译器GCC GNU编译器套件（GNU Compiler Collection） 安装方法：通过HomeBrew安装 1$ brew install gcc  第一个C语言程序书写代码1、新建一个文件，保存到proj-c目录下，命名为hello.c。   Tips:一定要">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-02T09:52:13.023Z">
+<meta property="og:updated_time" content="2019-06-02T10:21:54.642Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="初识C语言">
 <meta name="twitter:description" content="环境搭建编辑器SublimeText http://www.sublimetext.com 书写代码的工具软件，类比Word。 编译器GCC GNU编译器套件（GNU Compiler Collection） 安装方法：通过HomeBrew安装 1$ brew install gcc  第一个C语言程序书写代码1、新建一个文件，保存到proj-c目录下，命名为hello.c。   Tips:一定要">
@@ -366,7 +366,7 @@
                 
               
 
-              <time title="创建时间：2019-06-02 17:18:09 / 修改时间：17:52:13" itemprop="dateCreated datePublished" datetime="2019-06-02T17:18:09+08:00">2019-06-02</time>
+              <time title="创建时间：2019-06-02 17:18:09 / 修改时间：18:21:54" itemprop="dateCreated datePublished" datetime="2019-06-02T17:18:09+08:00">2019-06-02</time>
             
 
             
@@ -473,7 +473,7 @@
 </blockquote>
 <p>2、int main(void){}<br>main函数，C语言执行的入口函数，{}表示函数的开始和结束</p>
 <p>3、return 0;<br>main函数的返回值。</p>
-<h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>我们可以用简洁明了的语言将程序要表达的意思标注中程序中，提高程序的可读性。注释并不影响程序的运行。 </p>
+<h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>我们可以用简洁明了的语言将程序要表达的意思标注在程序中，提高程序的可读性。注释并不影响程序的运行。 </p>
 <p>例如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">	在控制台打印出“Hello World”</span><br><span class="line">*/</span><br><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main(void)</span><br><span class="line">&#123;</span><br><span class="line">	printf(&quot;Hello World\n&quot;);</span><br><span class="line"></span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -484,7 +484,7 @@
 
 <p>这两行代码结尾都用到了分号。这里的分号代表语句的结束，相当于中文里的句号。</p>
 <h4 id="printf函数"><a href="#printf函数" class="headerlink" title="printf函数"></a>printf函数</h4><p>printf函数可以在显示器上进行输出操作。<br>在上面的例子中是在显示器上打印出了一串字符，需要打印的字符由双引号括起来。</p>
-<h4 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h4><p>以上示例中由双印好括起来的 “Hello World\n” 称为<strong>字符串常量</strong></p>
+<h4 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h4><p>以上示例中由双引号括起来的 “Hello World\n” 称为<strong>字符串常量</strong></p>
 <h4 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h4><p>以上示例中”Hello World”后面紧跟的 “\n” 称为<strong>转义字符</strong>，它用来实现换行的功能。</p>
 <p>～～试试不加换行符呢</p>
 <h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><h3 id="无格式化输出printf"><a href="#无格式化输出printf" class="headerlink" title="无格式化输出printf"></a>无格式化输出printf</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">printf(&quot;Hello World\n&quot;);</span><br></pre></td></tr></table></figure>
@@ -503,7 +503,7 @@
 <h3 id="格式化输出printf"><a href="#格式化输出printf" class="headerlink" title="格式化输出printf"></a>格式化输出printf</h3><p>计算 12 和 30 的和是多少，并显示结果。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">printf(&quot;12与30的和是%d。\n&quot;, 12 + 30);</span><br></pre></td></tr></table></figure>
 
-<p>“%d”指定了实参的输出格式，它告诉程序以十进制的形式显示后面的实参。因此 printf 函数显示出了第二个参数 12+30 的值，即 12 与 30 的和 42。</p>
+<p>“%d”指定了实参的输出格式，它告诉程序以十进制的形式显示后面的实参。因此 printf 函数显示出了第二个参数 12 + 30 的值，即 12 与 30 的和 42。</p>
 <p>修改一下，计算 12 和 30 的差是多少，并显示结果。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">printf(&quot;12与30的差是%d。\n&quot;, 12 - 30);</span><br></pre></td></tr></table></figure>
 
@@ -520,7 +520,7 @@
 <p>上述程序中先声明了一个 int 型的变量 x，然后对 x 进行赋值，最后输出 x 的值。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x = 10;</span><br></pre></td></tr></table></figure>
 
-<p>此处的等于号“=”表示把右侧的值赋给左侧的变量。因此上述赋值语句为把 10 复制给变量 x 。</p>
+<p>此处的等于号“=”表示把右侧的值赋给左侧的变量。因此上述赋值语句为把 10 赋值给变量 x 。</p>
 <blockquote>
 <p>注意：程序中的“=”不同于数学计算中的“等于”。</p>
 </blockquote>
@@ -589,6 +589,22 @@
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/06/02/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
 
       
       
@@ -653,7 +669,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
