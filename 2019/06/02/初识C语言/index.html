@@ -96,13 +96,17 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="JingJing的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="1、环境搭建编辑器SublimeText http://www.sublimetext.com 书写代码的工具软件，类比Word。 编译器GCC GNU编译器套件（GNU Compiler Collection） 安装方法：通过HomeBrew安装 1$ brew install gcc  2、第一个C语言程序书写代码1、新建一个文件，保存到proj-c目录下，命名为hello.c。   Tips">
+<meta property="og:type" content="article">
+<meta property="og:title" content="初识C语言">
+<meta property="og:url" content="http://yoursite.com/2019/06/02/初识C语言/index.html">
 <meta property="og:site_name" content="JingJing的博客">
+<meta property="og:description" content="1、环境搭建编辑器SublimeText http://www.sublimetext.com 书写代码的工具软件，类比Word。 编译器GCC GNU编译器套件（GNU Compiler Collection） 安装方法：通过HomeBrew安装 1$ brew install gcc  2、第一个C语言程序书写代码1、新建一个文件，保存到proj-c目录下，命名为hello.c。   Tips">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-06-02T09:48:15.113Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JingJing的博客">
+<meta name="twitter:title" content="初识C语言">
+<meta name="twitter:description" content="1、环境搭建编辑器SublimeText http://www.sublimetext.com 书写代码的工具软件，类比Word。 编译器GCC GNU编译器套件（GNU Compiler Collection） 安装方法：通过HomeBrew安装 1$ brew install gcc  2、第一个C语言程序书写代码1、新建一个文件，保存到proj-c目录下，命名为hello.c。   Tips">
 
 
 
@@ -110,7 +114,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2019/06/02/初识C语言/">
 
 
 
@@ -120,7 +124,7 @@
   };
 </script>
 
-  <title>JingJing的博客</title>
+  <title>初识C语言 | JingJing的博客</title>
   
 
 
@@ -168,8 +172,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -207,7 +210,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -303,9 +306,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -337,10 +340,8 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/06/02/初识C语言/" class="post-title-link" itemprop="url">初识C语言</a>
+          <h1 class="post-title" itemprop="name headline">初识C语言
+
               
             
           </h1>
@@ -429,9 +430,7 @@
       
 
       
-        
-          
-            <h2 id="1、环境搭建"><a href="#1、环境搭建" class="headerlink" title="1、环境搭建"></a>1、环境搭建</h2><h3 id="编辑器"><a href="#编辑器" class="headerlink" title="编辑器"></a>编辑器</h3><p>SublimeText <a href="http://www.sublimetext.com" target="_blank" rel="noopener">http://www.sublimetext.com</a></p>
+        <h2 id="1、环境搭建"><a href="#1、环境搭建" class="headerlink" title="1、环境搭建"></a>1、环境搭建</h2><h3 id="编辑器"><a href="#编辑器" class="headerlink" title="编辑器"></a>编辑器</h3><p>SublimeText <a href="http://www.sublimetext.com" target="_blank" rel="noopener">http://www.sublimetext.com</a></p>
 <p>书写代码的工具软件，类比Word。</p>
 <h3 id="编译器"><a href="#编译器" class="headerlink" title="编译器"></a>编译器</h3><p>GCC</p>
 <p>GNU编译器套件（GNU Compiler Collection）</p>
@@ -564,8 +563,6 @@
 <li>试一试：添加一个新的变量 sum 来存储 n1 + n2 。</li>
 </ul>
 
-          
-        
       
     </div>
 
@@ -588,12 +585,12 @@
       
 
       
+      
+      
 
       
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -603,14 +600,15 @@
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -630,8 +628,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -700,6 +707,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、环境搭建"><span class="nav-number">1.</span> <span class="nav-text">1、环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#编辑器"><span class="nav-number">1.1.</span> <span class="nav-text">编辑器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编译器"><span class="nav-number">1.2.</span> <span class="nav-text">编译器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、第一个C语言程序"><span class="nav-number">2.</span> <span class="nav-text">2、第一个C语言程序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#书写代码"><span class="nav-number">2.1.</span> <span class="nav-text">书写代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编译代码"><span class="nav-number">2.2.</span> <span class="nav-text">编译代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行代码"><span class="nav-number">2.3.</span> <span class="nav-text">运行代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分析代码"><span class="nav-number">2.4.</span> <span class="nav-text">分析代码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#固定格式"><span class="nav-number">2.4.1.</span> <span class="nav-text">固定格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注释"><span class="nav-number">2.4.2.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#语句"><span class="nav-number">2.4.3.</span> <span class="nav-text">语句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#printf函数"><span class="nav-number">2.4.4.</span> <span class="nav-text">printf函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串"><span class="nav-number">2.4.5.</span> <span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#转义字符"><span class="nav-number">2.4.6.</span> <span class="nav-text">转义字符</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、输出"><span class="nav-number">3.</span> <span class="nav-text">3、输出</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#无格式化输出printf"><span class="nav-number">3.1.</span> <span class="nav-text">无格式化输出printf</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#无格式化输出puts"><span class="nav-number">3.2.</span> <span class="nav-text">无格式化输出puts</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#格式化输出printf"><span class="nav-number">3.3.</span> <span class="nav-text">格式化输出printf</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、变量"><span class="nav-number">4.</span> <span class="nav-text">4、变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#变量和声明"><span class="nav-number">4.1.</span> <span class="nav-text">变量和声明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#赋值"><span class="nav-number">4.2.</span> <span class="nav-text">赋值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化"><span class="nav-number">4.3.</span> <span class="nav-text">初始化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、输入"><span class="nav-number">5.</span> <span class="nav-text">5、输入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#格式化输入scanf"><span class="nav-number">5.1.</span> <span class="nav-text">格式化输入scanf</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -831,6 +855,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
 
   
 
@@ -846,6 +874,8 @@
 
   
 
+
+  
 
 
   
