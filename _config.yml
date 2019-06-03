@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: JingJing的博客
+title: 青青的博客
 subtitle:
 description:
 keywords:
-author: JingJing
+author: QingQing
 language: zh-CN
 timezone:
 
@@ -41,7 +41,7 @@ future: true
 highlight:
   enable: true
   line_number: true
-  auto_detect: false
+  auto_detect: true
   tab_replace:
   
 # Home page setting

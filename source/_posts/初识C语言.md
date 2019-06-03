@@ -37,9 +37,9 @@ $ brew install gcc
 
 int main(void)
 {
-	printf("Hello World\n");
+    printf("Hello World\n");
 
-	return 0;
+    return 0;
 }
 ```
 3、保存hello.c文件
@@ -88,9 +88,9 @@ $ ./hello
 
 int main(void)
 {
-	/*...*/
+    /*...*/
 
-	return 0;
+    return 0;
 }
 ```
 1、\#include \<stdio.h>   
@@ -110,15 +110,15 @@ main函数的返回值。
 
 ```
 /*
-	在控制台打印出“Hello World”
+    在控制台打印出“Hello World”
 */
 #include <stdio.h>
 
 int main(void)
 {
-	printf("Hello World\n");
+    printf("Hello World\n");
 
-	return 0;
+    return 0;
 }
 ```
 
@@ -218,7 +218,9 @@ x = 10;
 
 int main(void) {
     int x = 10;
+
     printf("x的值为%d\n", x);
+
     return 0;
 }
 ```
@@ -231,7 +233,9 @@ int main(void) {
 
 int main(void) {
     int x ;
+
     printf("x的值为%d\n", x);
+    
     return 0;
 }
 ```
