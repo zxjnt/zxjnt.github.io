@@ -135,7 +135,7 @@
 <meta property="og:site_name" content="青青的博客">
 <meta property="og:description" content="基本数据类型分类基本数据类型分为整数类数据类型和浮点型。 整数类数据类型又分为： 1、枚举型enum…型 2、字符型char型signed char型unsigned char型    3、整型signed short int型unsigned short int型signed int型unsigned int型signed long int型unsigned long int型  浮点型分为fl">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-05T03:49:11.671Z">
+<meta property="og:updated_time" content="2019-06-05T03:56:03.944Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基本数据类型和运算">
 <meta name="twitter:description" content="基本数据类型分类基本数据类型分为整数类数据类型和浮点型。 整数类数据类型又分为： 1、枚举型enum…型 2、字符型char型signed char型unsigned char型    3、整型signed short int型unsigned short int型signed int型unsigned int型signed long int型unsigned long int型  浮点型分为fl">
@@ -398,7 +398,7 @@
                 
               
 
-              <time title="创建时间：2019-06-05 11:34:31 / 修改时间：11:49:11" itemprop="dateCreated datePublished" datetime="2019-06-05T11:34:31+08:00">2019-06-05</time>
+              <time title="创建时间：2019-06-05 11:34:31 / 修改时间：11:56:03" itemprop="dateCreated datePublished" datetime="2019-06-05T11:34:31+08:00">2019-06-05</time>
             
 
             
@@ -477,7 +477,7 @@
 <h3 id="整数的取值范围与长度"><a href="#整数的取值范围与长度" class="headerlink" title="整数的取值范围与长度"></a>整数的取值范围与长度</h3><p>short、int、long 是C语言中常用的三种整数类型。对于这三种类型又有 signed 和 unsigned 之分。</p>
 <p>上面我们知道了如何求整型的长度，那如何知道整数的取值范围呢？</p>
 <p>在计算机的内部，任何数据都是以 ‘1’、‘0’ 的形式进行存储的。那对于一个无符号整数来说所有存储位上都为 1 即为可存储的最大值，所有存储位上都为 0 即为可存储的最小值。对于有符号的整数存储位的第一个为符号位，‘1’为负数，‘0’为正数，当除符号位其他位均为 1 时分别表示所能表示的最大、最小值。</p>
-<p>例：int型长度为4（具体值视编译器而定），总共有32位<br>unsigned int 0 ~ 2<sup>32</sup> - 1<br>signed int - (2<sup>31</sup> - 1) ~ 2<sup>31</sup> - 1</p>
+<p>例：int型长度为4（具体值视编译器而定），总共有32位<br>unsigned int    0 ~ 2<sup>32</sup> - 1<br>signed int      - (2<sup>31</sup> - 1) ~ 2<sup>31</sup> - 1</p>
 <p>～ 同理 short 和 long 自己算算看！</p>
 <h2 id="字符型"><a href="#字符型" class="headerlink" title="字符型"></a>字符型</h2><p>char 是用来保存“字符”的数据类型。char 在所有编译器中的长度都是 1 。</p>
 <p>～ 自己通过 sizeof 运算来验证一下 char 的长度呢</p>
@@ -495,11 +495,11 @@
 <h2 id="基础运算"><a href="#基础运算" class="headerlink" title="基础运算"></a>基础运算</h2><p>在我们的数学学习中知道有加、减、乘、除的运算，那我们就来试试吧。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    读取两个整数的值，然后显示出它们的和、差、积、商和余数</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x, y;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"请输入两个整数：\n"</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"整数x："</span>); <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;x);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"整数y："</span>); <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;y);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"您输入的两个整数是：%d %d\n"</span>, x, y);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"x + y = %d\n"</span>, x + y);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"x - y = %d\n"</span>, x - y);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"x * y = %d\n"</span>, x * y);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"x / y = %d\n"</span>, x / y);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"x %% y = %d\n"</span>, x % y);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>以上是正数的和、差、积、商和余数运算。注意在余数运算的时候的两个 % 了吗？这些因为 % 是有特殊含义的。如：%d，当需要显示 % 这个符号的时候就需要写两个。</p>
+<p>以上是整数的和、差、积、商和余数运算。注意在余数运算的时候的两个 % 了吗？这些因为 % 是有特殊含义的。如：%d，当需要显示 % 这个符号的时候就需要写两个。</p>
 <p>下面我们再来看看浮点数的基础运算呢。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    读取两个实数值，用实数显示出它们的和、差、积、商</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> x, y; <span class="comment">/*浮点数*/</span></span><br><span class="line"></span><br><span class="line">	<span class="built_in">puts</span>(<span class="string">"请输入两个数。"</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"实数x："</span>); <span class="built_in">scanf</span>(<span class="string">"%lf"</span>, &amp;x);<span class="comment">//小写英文字母l</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"实数y："</span>); <span class="built_in">scanf</span>(<span class="string">"%lf"</span>, &amp;y);</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"x + y = %f\n"</span>, x + y);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"x - y = %f\n"</span>, x - y);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"x * y = %f\n"</span>, x * y);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"x / y = %f\n"</span>, x / y);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
+<p>好了，至此我们已经学会了关于整数和实数的基础运算。</p>
 
       
     </div>
