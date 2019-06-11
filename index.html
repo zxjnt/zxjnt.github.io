@@ -352,6 +352,363 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/10/分支结构/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="QingQing">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="青青的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/06/10/分支结构/" class="post-title-link" itemprop="url">分支结构</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-06-10 14:04:10" itemprop="dateCreated datePublished" datetime="2019-06-10T14:04:10+08:00">2019-06-10</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-06-11 11:46:35" itemprop="dateModified" datetime="2019-06-11T11:46:35+08:00">2019-06-11</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/IT/" itemprop="url" rel="index"><span itemprop="name">IT</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/IT/C/" itemprop="url" rel="index"><span itemprop="name">C</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>在前面的学习中我们的代码都是顺序一行一行的执行的，这叫做<strong>顺序结构</strong>。但很多时候我们需要作出判断来决定代码的运行方向，这就是<strong>分支结构</strong>。</p>
+<h2 id="if-else"><a href="#if-else" class="headerlink" title="if/else"></a>if/else</h2><p>if/else的结构如下：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">if</span><span class="params">(判断表达式)</span></span>&#123;</span><br><span class="line">    语句块<span class="number">1</span></span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    语句块<span class="number">2</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>下面我们就来看几个例子吧！</p>
+<p>示例1:奇偶的判定</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> no;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"请输入一个整数："</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;no);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (no % <span class="number">2</span>)</span><br><span class="line">		<span class="built_in">puts</span>(<span class="string">"输入的整数是奇数"</span>);</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="built_in">puts</span>(<span class="string">"输入的整数是偶数"</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>no % 2 为变量 no 除以 2 所得的余数，如果余数为 1 ，即判断表达式等于 1 时，则该数为奇数，如果为 0 ，则为偶数。</p>
+<blockquote>
+<p>上面的示例中，由于语句块1和语句块2都是单语句，所以这儿我们没有写 {} ，这种写法是允许的，也就是说对于 if 和 else 的执行语句为单一语句的时候，可以省略大括号。</p>
+</blockquote>
+<p>示例2:是否为0</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> num;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"请输入一个整数："</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;num);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (num) &#123;</span><br><span class="line">        <span class="built_in">puts</span>(<span class="string">"该整数不是0"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">puts</span>(<span class="string">"该整数是0"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>通过上面两个例子的学习，我们是不是已经掌握了基本的if/else语句了呢？<br>下面再来学习一些新知识：</p>
+<h3 id="相等运算符"><a href="#相等运算符" class="headerlink" title="相等运算符"></a>相等运算符</h3><p>在之前的学习中我们知道 a = b ;的含义是将 b 赋值给 a ，那如果想表示 a 和 b 相等该如何表示呢？</p>
+<p>在C语言中我们用两个等于号来表示相等 == ，用感叹号和等于号来表示不等 != 。</p>
+<blockquote>
+<p>注意：= 和 = 之间，! 和 = 之间不要有空格。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>a == b</th>
+<th>如果a和b的值相等则表达式的值为1，不等则为0</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>a != b</td>
+<td>如果a和b的值不相等则表达式的值为1，相等则为0</td>
+</tr>
+</tbody></table>
+<p>下面让我们来做这样一个判断：<br>示例3:判断两个整数是否相等</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n1, n2;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"请输入两个整数："</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"整数1："</span>); <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n1);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"整数2："</span>); <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n2);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (n1 == n2) &#123;</span><br><span class="line">        <span class="built_in">puts</span>(<span class="string">"它们相等"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">puts</span>(<span class="string">"它们不相等"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果把判断表达式修改为 n1 != n2 ，整个代码该如何修改呢？自己试试看呢。</p>
+<p>～请运用相等/不等运算符分别修改示例1和示例2的代码达到同样的判断效果呢～</p>
+<h3 id="关系运算符"><a href="#关系运算符" class="headerlink" title="关系运算符"></a>关系运算符</h3><p>上面讲到相等、不相等，那大于、小于呢？</p>
+<table>
+<thead>
+<tr>
+<th>a &lt; b</th>
+<th>a小于b时表达式的值为1，反之为0</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>a &gt; b</td>
+<td>a大于b时表达式的值为1，反之为0</td>
+</tr>
+<tr>
+<td>a &lt;= b</td>
+<td>a小于等于b时表达式的值为1，反之为0</td>
+</tr>
+<tr>
+<td>a &gt;= b</td>
+<td>a大于等于b时表达式的值为1，反之为0</td>
+</tr>
+</tbody></table>
+<p>下面就让我们通过关系运算符来做整数正、负、0的判断。</p>
+<p>示例4-1:输入一个整数，判断该整数的符号。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> no;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"请输入一个整数："</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;no);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (no == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">puts</span>(<span class="string">"该整数为0"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (no &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">puts</span>(<span class="string">"该整数为正数"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">puts</span>(<span class="string">"该整数为负数"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个示例中我们发现多了一个 else if 的判断，也就是说出现了三个分支。三个甚至三个以上的分支都是允许的，用 else if 来做判断，大家在运用的时候要注意所有分支的判断条件加起来的完整性。也就是说上面的例子中通过等于0、大于0、其他（小于0）概括了所有的整数。</p>
+<h3 id="嵌套的if语句"><a href="#嵌套的if语句" class="headerlink" title="嵌套的if语句"></a>嵌套的if语句</h3><p>下面我们来把上面的代码修改一下：</p>
+<p>示例4-2:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> no;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"请输入一个整数："</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;no);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (no == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">puts</span>(<span class="string">"该整数为0"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (no &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="built_in">puts</span>(<span class="string">"该整数为正数"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="built_in">puts</span>(<span class="string">"该整数为负数"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>我们再来修改一下代码：</p>
+<p>示例4-3:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> no;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"请输入一个整数："</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;no);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (no != <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (no &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="built_in">puts</span>(<span class="string">"该整数为正数"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="built_in">puts</span>(<span class="string">"该整数为负数"</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">puts</span>(<span class="string">"该整数为0"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如上所述我们对代码进行了两次修改，都实现了整数正、负、0的判断。像这种在 if 或者 else 的语句块中又出现了 if/else 称之为<strong>嵌套的if语句</strong></p>
+<p>～修改示例1的代码，试试用嵌套的if语句实现先判断整数的正负，如果输入的是正数再判断奇偶。</p>
+<h3 id="条件运算符"><a href="#条件运算符" class="headerlink" title="条件运算符"></a>条件运算符</h3><p>在讲条件运算符之前我们先看一下两个数比大小的问题。</p>
+<p>示例5-1:比较两个整数中的较大数</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n1, n2;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"请输入两个整数："</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"整数1："</span>); <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n1);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"整数2："</span>); <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n2);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (n1 &gt; n2) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"较大的数是%d。\n"</span>, n1);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"较大的数是%d。\n"</span>, n2);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>修改一下上面的代码，将较大数存在一个变量 max 中呢。<br>示例5-2:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n1, n2, max;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"请输入两个整数："</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"整数1："</span>); <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n1);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"整数2："</span>); <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n2);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (n1 &gt; n2) &#123;</span><br><span class="line">        max = n1;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        max = n2;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"较大的数是%d。\n"</span>, max);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>下面我们就来看看用条件运算符该如何实现比大小问题。<br>示例5-3:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n1, n2, max;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"请输入两个整数："</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"整数1："</span>); <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n1);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"整数2："</span>); <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n2);</span><br><span class="line"></span><br><span class="line">    max = (n1 &gt; n2) ? n1 : n2;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"较大的数是%d。\n"</span>, max);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>a ? b : c</th>
+<th>如果 a 不为 0，则表达式的结果是 b 的值，否则结果是 c 的值</th>
+</tr>
+</thead>
+</table>
+<p>～活学活用，上面运用了条件运算符来比大小，思考一下如果用条件运算符来计算两个整数的差值呢？</p>
+<p>示例6:计算输入的两个整数的差值</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n1, n2;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"请输入两个整数："</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"整数1："</span>); <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n1);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"整数2："</span>); <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n2);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"它们的差是%d。\n"</span>, (n1 &gt; n2) ? n1 - n2 : n2 - n1);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><p>在我们进行一些条件判断的时候经常会碰到满足条件1并且满足条件2的情况，还有满足条件1或者条件2的情况，那用计算机语言该如何表示呢？</p>
+<p>下面让我们来看一个关于月份所属季节的问题。</p>
+<p>示例7-1:显示所输入的月份所属季节</p>
+<figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line"><span class="built_in">int</span> main(<span class="keyword">void</span>) &#123;</span><br><span class="line">    <span class="built_in">int</span> <span class="built_in">month</span>;</span><br><span class="line"></span><br><span class="line">    printf(<span class="string">"请输入月份："</span>);</span><br><span class="line">    scanf(<span class="string">"%d"</span>, &amp;<span class="built_in">month</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">month</span> &gt;= <span class="number">3</span> &amp;&amp; <span class="built_in">month</span> &lt;= <span class="number">5</span>) &#123;</span><br><span class="line">        printf(<span class="string">"%d月是春季。\n"</span>, <span class="built_in">month</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">month</span> &gt; <span class="number">5</span> &amp;&amp; <span class="built_in">month</span> &lt; <span class="number">9</span>) &#123;</span><br><span class="line">        printf(<span class="string">"%d月是夏季。\n"</span>, <span class="built_in">month</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">month</span> &gt;= <span class="number">9</span> &amp;&amp; <span class="built_in">month</span> &lt;= <span class="number">11</span>) &#123;</span><br><span class="line">        printf(<span class="string">"%d月是秋季。\n"</span>, <span class="built_in">month</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">month</span> == <span class="number">1</span> || <span class="built_in">month</span> == <span class="number">2</span> || <span class="built_in">month</span> == <span class="number">12</span>) &#123;</span><br><span class="line">        printf(<span class="string">"%d月是冬季。\n"</span>, <span class="built_in">month</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        printf(<span class="string">"%d月不存在。！！\n"</span>, <span class="built_in">month</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>关于春季的判断，当月份数满足大于等于 3、小于等于 5 的为春节，即3、4、5月。<br>关于夏季的判断，当月份数满足大于 5、小于 9 的为夏季，即6、7、8月。<br>关于秋季的判断，当月份数满足大于等于 9、小于等于 11 的为秋季，即9、10、11月。<br>关于冬季的判断，当月份数为 1 或者 2 或者 12 的为冬季，即12、1、2月。 </p>
+<p>通过上面的月份与季节的判断我们应该已经掌握了逻辑运算符的应用，现在我们来总结一下。</p>
+<table>
+<thead>
+<tr>
+<th align="center">a</th>
+<th align="center">b</th>
+<th align="center">a&amp;&amp;b</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">非0</td>
+<td align="center">非0</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">非0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">0</td>
+<td align="center">非0</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">a</th>
+<th align="center">b</th>
+<th align="center">a &#124;&#124; b</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">非0</td>
+<td align="center">非0</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">非0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">0</td>
+<td align="center">非0</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+</tbody></table>
+<h2 id="switch-case"><a href="#switch-case" class="headerlink" title="switch/case"></a>switch/case</h2><p>我们来看看如何通过switch/case语句来实现示例7中的月份和季节的关系。</p>
+<p>示例7-2:显示所输入的月份所属季节</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> month;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"请输入月份："</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;month);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">switch</span> (month) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">    <span class="keyword">case</span> <span class="number">4</span>:</span><br><span class="line">    <span class="keyword">case</span> <span class="number">5</span>:</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d月是春季\n"</span>, month);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">case</span> <span class="number">6</span>:</span><br><span class="line">    <span class="keyword">case</span> <span class="number">7</span>:</span><br><span class="line">    <span class="keyword">case</span> <span class="number">8</span>:</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d月是夏季\n"</span>, month);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">case</span> <span class="number">9</span>:</span><br><span class="line">    <span class="keyword">case</span> <span class="number">10</span>:</span><br><span class="line">    <span class="keyword">case</span> <span class="number">11</span>:</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d月是秋季\n"</span>, month);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">case</span> <span class="number">12</span>:</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d月是冬季\n"</span>, month);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d月不存在！！！\n"</span>, month);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>通过上面的修改是不是结构更清晰了呢。同时我们也能够看出当判断的条件值为多个的时候我们可以选择使用switch语句来简化我们的代码。</p>
+<h3 id="关于break"><a href="#关于break" class="headerlink" title="关于break"></a>关于break</h3><p>上面的代码中我们看到只有在 month 为5、8、11、2的时候才有 printf 语句和 break 语句，那当 month 为 3 的时候是如何执行的呢？当 month 为 3 时，到第一个 case 3 判断满足条件，但是并没有执行代码，也没有 break 语句，所以继续往下执行 case 4，同样没有执行代码，也没有 break 语句，继续往下执行 case 4，这个时候输出“3月是春季”，同时因为后面的 break 语句，跳出当前 swtich 语句，继续往下执行。</p>
+<p>我们再来看这样一个例子，来强化一下对于break的理解呢。</p>
+<p>示例8:复杂的switch语句，深刻理解break；</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> sw;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"整数:"</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;sw);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">switch</span> (sw) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>: <span class="built_in">puts</span>(<span class="string">"A"</span>); <span class="built_in">puts</span>(<span class="string">"B"</span>); <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span>: <span class="built_in">puts</span>(<span class="string">"C"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">case</span> <span class="number">5</span>: <span class="built_in">puts</span>(<span class="string">"D"</span>); <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">case</span> <span class="number">6</span>:</span><br><span class="line">    <span class="keyword">case</span> <span class="number">7</span>: <span class="built_in">puts</span>(<span class="string">"E"</span>); <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">default</span>: <span class="built_in">puts</span>(<span class="string">"F"</span>); <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行上面的代码试试看，看看输出是什么呢？</p>
+<p>分支结构是非常重要的计算机基础知识，希望大家能多多练习，扎实基本功。下面放几个题目供大家练习。</p>
+<p>1、输入三个正整数，将这三个数从小到大输出。</p>
+<p>2、请输入星期几的第一个字母来判断一下是星期几，如果第一个字母一样，则继续判断第二个字母。</p>
+<p>3、输入学生成绩，如果大于等于80输出“优秀”，70～79输出“良好”，60～69输出“及格”，低于60输出“不及格”。</p>
+<p>4、输入某年某月，打印出该月天数，注意大小月以及闰年。</p>
+<p>5、2019最新个人所得税免征额提高到5000，5001～8000部分税率3%，8001～17000部分税率10%，17001～30000部分税率20%，30001～40000部分税率25%，40001～60000部分税率30%，60001～85000部分税率35%，85000部分以上45%。输入当月工资额，计算应交个税。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/05/基本数据类型和运算/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1264,7 +1621,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
