@@ -18,7 +18,7 @@ GNU编译器套件（GNU Compiler Collection）
 
 安装方法：通过HomeBrew安装
 
-> Homebrew不会安装？请看Homebrew的安装方法 <https://rubycoder.cn/2019/06/03/Homebrew的安装方法/>
+> Homebrew不会安装？请看[Homebrew的安装方法](https://rubycoder.cn/2019/06/03/Homebrew的安装方法/)
 
 ```
 $ brew install gcc
