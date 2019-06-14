@@ -1,8 +1,8 @@
 ---
 title: Homebrew的安装方法
-date: 2019-06-03 09:44:12
+date: 2019-06-02 09:44:12
 tags:
-categories: [IT,Base]
+categories: [IT,Common]
 ---
 
 ## 关于Homebrew

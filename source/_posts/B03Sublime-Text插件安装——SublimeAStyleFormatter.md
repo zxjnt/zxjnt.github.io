@@ -1,9 +1,10 @@
 ---
 title: Sublime Text插件安装——SublimeAStyleFormatter
-date: 2019-06-12 09:44:31
+date: 2019-06-04 10:44:31
 tags:
-categories: [IT,Base]
+categories: [IT,Common]
 ---
+
 本文将以SublimeAStyleFormatter插件为例来讲解Sublime Text插件的安装。
 
 为什么需要安装插件呢？一些优秀的插件将帮助我们的编码工作变得简单，比如上面提到的SublimeAStyleFormatter插件能够实现代码的格式化。
