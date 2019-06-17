@@ -60,7 +60,7 @@ There are no packages available for installation
 
 Please see https://packagecontrol.io/docs/troubleshooting for help
 
-悲剧了，国内的网络的环境总是不那么友好，那么首先你需要[学会科学上网](https://rubycoder.cn/2019/06/04/学会科学上网/)
+悲剧了，国内的网络的环境总是不那么友好，那么首先你需要[学会科学上网](https://rubycoder.cn/2019/06/03/B02学会科学上网/)
 
 一番折腾之后我们终于顺利安装了代码格式化的插件了，离成功还差最后的一小步，我们还需要做一些配置。
 
