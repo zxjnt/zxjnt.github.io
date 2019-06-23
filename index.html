@@ -352,6 +352,226 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/23/C05数组/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="QingQing">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="青青的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/06/23/C05数组/" class="post-title-link" itemprop="url">C05数组</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-06-23 14:20:42 / 修改时间：16:22:24" itemprop="dateCreated datePublished" datetime="2019-06-23T14:20:42+08:00">2019-06-23</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/IT/" itemprop="url" rel="index"><span itemprop="name">IT</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/IT/C/" itemprop="url" rel="index"><span itemprop="name">C</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>数组就是相同类型的变量的集合。比如：记录学生身高、体重等。</p>
+<p>在学习数组的时候我们来回想一下变量的学习过程。变量声明、赋值、初始化。</p>
+<h2 id="数组的声明"><a href="#数组的声明" class="headerlink" title="数组的声明"></a>数组的声明</h2><p>声明就是指定元素类型、变量名、元素个数。如：</p>
+<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int a[<span class="number">5</span>]<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+
+<p>声明一个类型为 int ，元素个数为 5 个，变量名为 a 的数组。</p>
+<h2 id="数组的赋值与访问"><a href="#数组的赋值与访问" class="headerlink" title="数组的赋值与访问"></a>数组的赋值与访问</h2><p>对数组的赋值和访问都可以通过<strong>下标运算符</strong>来实现。例如对于数组 a[5] ，它的数组元素为 a[0]、a[1]、a[2]、a[3]、a[4]。</p>
+<blockquote>
+<p>注意：数组的下标是从 0 开始的，而不是 1 。a[2]下标为2，表示a[2]是首个元素之后的第2个元素。</p>
+</blockquote>
+<p>示例1-1:数组的赋值与访问</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    依次把1、2、3、4、5赋值给数组的每个元素并显示</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main(void) &#123;</span><br><span class="line">    int v[<span class="number">5</span>];</span><br><span class="line"></span><br><span class="line">    v[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">    v[<span class="number">1</span>] = <span class="number">2</span>;</span><br><span class="line">    v[<span class="number">2</span>] = <span class="number">3</span>;</span><br><span class="line">    v[<span class="number">3</span>] = <span class="number">4</span>;</span><br><span class="line">    v[<span class="number">4</span>] = <span class="number">5</span>;</span><br><span class="line"></span><br><span class="line">    printf(<span class="string">"v[0] = %d<span class="subst">\n</span>"</span>, v[<span class="number">0</span>]);</span><br><span class="line">    printf(<span class="string">"v[1] = %d<span class="subst">\n</span>"</span>, v[<span class="number">1</span>]);</span><br><span class="line">    printf(<span class="string">"v[2] = %d<span class="subst">\n</span>"</span>, v[<span class="number">2</span>]);</span><br><span class="line">    printf(<span class="string">"v[3] = %d<span class="subst">\n</span>"</span>, v[<span class="number">3</span>]);</span><br><span class="line">    printf(<span class="string">"v[4] = %d<span class="subst">\n</span>"</span>, v[<span class="number">4</span>]);</span><br><span class="line"></span><br><span class="line">    return <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上面的代码示例通过下标依次对数组元素进行赋值和读取。</p>
+<p>我们还可以通过循环来对数组进行赋值。</p>
+<p>示例1-2:数组的赋值与访问</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    依次把1、2、3、4、5赋值给数组的每个元素并显示(for)</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">int</span> v[<span class="number">5</span>];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">        v[i] = i + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"v[%d] = %d\n"</span>, i, v[i]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>～试一试：通过键盘输入元素的值来对数组进行赋值。</p>
+<h2 id="数组的初始化"><a href="#数组的初始化" class="headerlink" title="数组的初始化"></a>数组的初始化</h2><p>除了可以用依此对元素赋值的方法外还可以在元素申明的时候进行初始化。如下所示：</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int v[<span class="number">5</span>] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>声明的时候也可以不指定元素个数，数组会根据初始值的个数自动进行设定。</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int v[] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>另外还有一个规则，就是用 0 对 {} 内没有赋初始值的元素进行初始化。因此，下面的两种方式是一样的效果。</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int v[] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">0</span>, <span class="number">0</span>&#125;;</span><br><span class="line">int v[] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>如果要使用 0 初始化数组中的全部元素，可以这样写：</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int v[<span class="number">5</span>] = &#123;<span class="number">0</span>&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="数组的复制"><a href="#数组的复制" class="headerlink" title="数组的复制"></a>数组的复制</h2><p>我们来看如下的代码示例</p>
+<p>示例2：数组的复制</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    把数组中的全部元素复制到另一个数组中</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">int</span> a[<span class="number">5</span>] = &#123;<span class="number">17</span>, <span class="number">23</span>, <span class="number">36</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> b[<span class="number">5</span>];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">        b[i] = a[i];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"  a   b"</span>);</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"---------"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%4d%4d\n"</span>, a[i], b[i]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>特别提醒：数组的复制必须将数组中的元素依此复制。</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">b</span> = a<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+
+<p>如上这样的赋值是错误。</p>
+<h2 id="对象式宏"><a href="#对象式宏" class="headerlink" title="对象式宏"></a>对象式宏</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">#def</span>ine <span class="selector-tag">a</span> <span class="selector-tag">b</span>    <span class="comment">/*将该指令之后的 a 替换为 b */</span></span><br></pre></td></tr></table></figure>
+
+<p>对象式宏一般用于数组个数的定义。这样当我们需要改变数组的个数的时候不用去代码中一个个找用到个数的地方，只要替换 define 中的 b 即可。</p>
+<p>我们用对象式宏来修改数组的赋值与访问。</p>
+<p>示例3:对象式宏的应用</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> NUMBER 5</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">int</span> v[NUMBER];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; NUMBER; i++) &#123;</span><br><span class="line">        v[i] = i + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; NUMBER; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"v[%d] = %d\n"</span>, i, v[i]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="数组的应用"><a href="#数组的应用" class="headerlink" title="数组的应用"></a>数组的应用</h2><h3 id="数组的倒序"><a href="#数组的倒序" class="headerlink" title="数组的倒序"></a>数组的倒序</h3><p>示例4:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    对数组的全部元素进行倒序排列</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> NUMBER 7</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">int</span> x[NUMBER];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; NUMBER; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"x[%d]:"</span>, i);</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;x[i]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; NUMBER / <span class="number">2</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> temp = x[i];</span><br><span class="line">        x[i] = x[NUMBER <span class="number">-1</span> - i];</span><br><span class="line">        x[NUMBER <span class="number">-1</span> - i] = temp;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"倒序排列了。"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; NUMBER; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"x[%d] = %d\n"</span>, i, x[i]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="利用数组处理学生分数问题"><a href="#利用数组处理学生分数问题" class="headerlink" title="利用数组处理学生分数问题"></a>利用数组处理学生分数问题</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    输入5名学生的分数并显示出他们的总分和平均分（宏）</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> NUMBER 5 <span class="comment">/*学生人数*/</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">int</span> tensu[NUMBER];<span class="comment">/*NUMBER个学生的分数*/</span></span><br><span class="line">    <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"请输入%d名学生的分数。\n"</span>, NUMBER);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; NUMBER; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%-2d号:"</span>, i + <span class="number">1</span>);</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;tensu[i]);</span><br><span class="line">        sum += tensu[i];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"总分：%5d\n"</span>, sum);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"平均分：%5.1f\n"</span>, (<span class="keyword">double</span>)sum / NUMBER);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="数组元素中的最大值和最小值"><a href="#数组元素中的最大值和最小值" class="headerlink" title="数组元素中的最大值和最小值"></a>数组元素中的最大值和最小值</h3><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    输入5名学生的分数并显示出其中的最高分和最低分</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> NUMBER 5</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> main(<span class="keyword">void</span>) &#123;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">int</span> tensu[NUMBER];</span><br><span class="line">    <span class="keyword">int</span> <span class="built_in">max</span>, <span class="built_in">min</span>;</span><br><span class="line"></span><br><span class="line">    printf(<span class="string">"请输入%d名学生的分数。\n"</span>, NUMBER);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">for</span> (i = <span class="number">0</span>; i &lt; NUMBER; i++) &#123;</span><br><span class="line">        printf(<span class="string">"%-2d号:"</span>, i + <span class="number">1</span>);</span><br><span class="line">        scanf(<span class="string">"%d"</span>, &amp;tensu[i]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">min</span> = <span class="built_in">max</span> = tensu[<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line">    <span class="built_in">for</span> (i = <span class="number">1</span>; i &lt; NUMBER; i++) &#123;</span><br><span class="line">        <span class="built_in">if</span> (tensu[i] &gt; <span class="built_in">max</span>) &#123; <span class="built_in">max</span> = tensu[i]; &#125;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">if</span> (tensu[i] &lt; <span class="built_in">min</span>) &#123; <span class="built_in">min</span> = tensu[i]; &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    printf(<span class="string">"最高分：%d\n"</span>, <span class="built_in">max</span>);</span><br><span class="line">    printf(<span class="string">"最低分：%d\n"</span>, <span class="built_in">min</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/12/C04循环结构/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2184,7 +2404,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2196,8 +2416,6 @@
                 <div class="site-state-item site-state-categories">
                   
                     
-                    
-                      
                     
                       
                     
