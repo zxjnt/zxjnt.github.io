@@ -130,14 +130,14 @@
 
   <meta name="description" content="数组就是相同类型的变量的集合。比如：记录学生身高、体重等。 在学习数组的时候我们来回想一下变量的学习过程。变量声明、赋值、初始化。 数组的声明声明就是指定元素类型、变量名、元素个数。如： 1int a[5];  声明一个类型为 int ，元素个数为 5 个，变量名为 a 的数组。 数组的赋值与访问对数组的赋值和访问都可以通过下标运算符来实现。例如对于数组 a[5] ，它的数组元素为 a[0]、a[">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C05数组">
+<meta property="og:title" content="数组">
 <meta property="og:url" content="http://yoursite.com/2019/06/23/C05数组/index.html">
 <meta property="og:site_name" content="青青的博客">
 <meta property="og:description" content="数组就是相同类型的变量的集合。比如：记录学生身高、体重等。 在学习数组的时候我们来回想一下变量的学习过程。变量声明、赋值、初始化。 数组的声明声明就是指定元素类型、变量名、元素个数。如： 1int a[5];  声明一个类型为 int ，元素个数为 5 个，变量名为 a 的数组。 数组的赋值与访问对数组的赋值和访问都可以通过下标运算符来实现。例如对于数组 a[5] ，它的数组元素为 a[0]、a[">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-23T08:22:24.420Z">
+<meta property="og:updated_time" content="2019-06-23T08:26:29.415Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C05数组">
+<meta name="twitter:title" content="数组">
 <meta name="twitter:description" content="数组就是相同类型的变量的集合。比如：记录学生身高、体重等。 在学习数组的时候我们来回想一下变量的学习过程。变量声明、赋值、初始化。 数组的声明声明就是指定元素类型、变量名、元素个数。如： 1int a[5];  声明一个类型为 int ，元素个数为 5 个，变量名为 a 的数组。 数组的赋值与访问对数组的赋值和访问都可以通过下标运算符来实现。例如对于数组 a[5] ，它的数组元素为 a[0]、a[">
 
 
@@ -156,7 +156,7 @@
   };
 </script>
 
-  <title>C05数组 | 青青的博客</title>
+  <title>数组 | 青青的博客</title>
   
 
 
@@ -372,7 +372,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">C05数组
+          <h1 class="post-title" itemprop="name headline">数组
 
               
             
@@ -398,7 +398,7 @@
                 
               
 
-              <time title="创建时间：2019-06-23 14:20:42 / 修改时间：16:22:24" itemprop="dateCreated datePublished" datetime="2019-06-23T14:20:42+08:00">2019-06-23</time>
+              <time title="创建时间：2019-06-23 14:20:42 / 修改时间：16:26:29" itemprop="dateCreated datePublished" datetime="2019-06-23T14:20:42+08:00">2019-06-23</time>
             
 
             
@@ -481,7 +481,7 @@
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    依次把1、2、3、4、5赋值给数组的每个元素并显示(for)</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">int</span> v[<span class="number">5</span>];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">        v[i] = i + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"v[%d] = %d\n"</span>, i, v[i]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>～试一试：通过键盘输入元素的值来对数组进行赋值。</p>
-<h2 id="数组的初始化"><a href="#数组的初始化" class="headerlink" title="数组的初始化"></a>数组的初始化</h2><p>除了可以用依此对元素赋值的方法外还可以在元素申明的时候进行初始化。如下所示：</p>
+<h2 id="数组的初始化"><a href="#数组的初始化" class="headerlink" title="数组的初始化"></a>数组的初始化</h2><p>除了可以用依此对元素赋值的方法外还可以在元素声明的时候进行初始化。如下所示：</p>
 <figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int v[<span class="number">5</span>] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;</span><br></pre></td></tr></table></figure>
 
 <p>声明的时候也可以不指定元素个数，数组会根据初始值的个数自动进行设定。</p>
